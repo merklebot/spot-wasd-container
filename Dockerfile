@@ -1,4 +1,14 @@
-FROM python:3.8
+FROM ghcr.io/merklebot/hackathon-arm-image:master as build
+
+ARG TARGETPLATFORM
+ARG BUILDPLATFORM
+ARG TARGETOS
+ARG TARGETARCH
+
+ARG Version
+ARG GitCommit
+RUN echo "I am running on $BUILDPLATFORM, building for $TARGETPLATFORM" 
+
 
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
