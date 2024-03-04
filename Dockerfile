@@ -17,4 +17,4 @@ RUN python3.8 -m pip install --upgrade pip
 RUN python3.8 -m pip install -r requirements.txt
 COPY . .
 
-ENTRYPOINT ["/bin/sh"]
+CMD ["/bin/sh"]
